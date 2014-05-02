@@ -1,7 +1,13 @@
 include device/qcom/msm8610/BoardConfig.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := true
+
+TARGET_NO_KERNEL := false
+KERNEL_DEFCONFIG := msm8610_defconfig
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.bootloader=L1TC000110E0
+
+### FIXME: Recovery is something that should work.
+TARGET_NO_RECOVERY := true
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 15728640
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 377487360
