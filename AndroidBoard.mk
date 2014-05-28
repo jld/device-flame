@@ -1,1 +1,1 @@
-include device/qcom/msm8610/AndroidBoard.mk
+include device/t2m/flame/msm8610-AndroidBoard.mk
